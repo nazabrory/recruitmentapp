@@ -1,4 +1,4 @@
-import type {Campaign, Stage} from './model'
+import {caseIds, type Campaign, type Stage} from './model'
 const roster: [string,Stage][] = [
   ['Dara Paramita','applied'],['Reno Pradana','applied'],['Sari Mahendra','test'],
   ['Nadia Laras','interview'],['Ardi Wisesa','screened'],['Lintang Pratiwi','offer'],
@@ -9,10 +9,10 @@ export function seed():Campaign {
     applications:roster.map(([name,stage],i)=>({id:'app-0'+(i+1),name,stage})),
     draft:{name:'',email:'',cv:'',mapping:'',records:'',video:''},
     submittedId:null,
-    ballots:['app-01','app-03'].flatMap(applicationId=>[
+    ballots:[caseIds.clear,caseIds.test].flatMap(applicationId=>[
       {applicationId,assessor:'ayu',recommendation:'accept',privateNote:''},
       {applicationId,assessor:'bima',recommendation:'hold',privateNote:''},
     ]),
-    grades:[{applicationId:'app-03',assessor:'bima',diagram:2,reasoning:1}],
+    grades:[{applicationId:caseIds.test,assessor:'bima',diagram:2,reasoning:1}],
   }
 }

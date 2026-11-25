@@ -19,7 +19,7 @@ export interface Application {
   recordedBy?: string
   materials?: Draft
 }
-export interface Ballot {
+export interface BallotEntry {
   applicationId: string
   assessor: Assessor
   recommendation: Decision
@@ -32,8 +32,9 @@ export interface Grade {
   reasoning: number
 }
 export interface Campaign {
+  deliberationApplicationId?: string
   applications: Application[]
-  ballots: Ballot[]
+  ballots: BallotEntry[]
   grades: Grade[]
   draft: Draft
   submittedId: string | null
