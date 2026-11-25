@@ -9,27 +9,27 @@ An organization that buys the product and owns its campaigns; one isolated works
 _Avoid_: Tenant, customer account, client
 
 **Campaign**:
-A single hiring drive run by a Company (one or more open positions, one applicant pool, one funnel); the unit that is sold, paid for, and demoed.
+A Company’s hiring drive for one role, with one or more openings and a shared application link, Rubric, and Pipeline.
 _Avoid_: Job, posting, project, requisition
 
 **Coordinator**:
-The Company-side role that configures a Campaign, owns consolidation, exports, and billing.
+The Company-wide role that manages Campaigns, staff assignments, exports, and billing and records final screening decisions.
 _Avoid_: Admin, recruiter, owner, HR user
 
 **Assessor**:
-A designated evaluator (technical or HR) assigned to review candidates and record evaluation decisions; sees candidates and casts ballots only.
+A technical or HR evaluator who reviews Applications, submits Ballots, and grades Technical Tests in assigned Campaigns.
 _Avoid_: Reviewer, judge, grader, interviewer
 
 **Candidate**:
-A person applying to a Campaign through a shareable link; holds no account by default, with an optional lightweight account for status checking and saving progress.
+A person applying to one or more Campaigns. Each Campaign has its own Application for that person.
 _Avoid_: Applicant, user, jobseeker
 
 **Application**:
-A Candidate's submission to one Campaign: form answers, uploaded documents, and an optional Intro Video; persists via the browser session without an account.
+A Candidate’s record of applying to one Campaign, from draft through hiring. It contains their form answers, uploaded documents, and optional Intro Video.
 _Avoid_: Submission, profile, resume drop
 
 **Intro Video**:
-A roughly one-minute selfie video a Candidate records in the browser, showcasing motivation and communication; shown in the swipe screening flow.
+An optional short video in which a Candidate introduces themselves and shares their motivation for the role.
 _Avoid_: Video CV, showreel
 
 **Job Requirements**:
@@ -37,23 +37,23 @@ The plain-language description of what a role needs, entered by the Coordinator;
 _Avoid_: Job ad, vacancy text, spec
 
 **Rubric**:
-The per-Campaign scoring model: criteria, weights, and thresholds. AI drafts it from the Job Requirements; only a human edits or approves it.
+The Campaign’s scoring criteria, weights, and thresholds. The Coordinator approves each version before it is used to score Applications.
 _Avoid_: Scoring model, matrix, criteria set
 
 **Screening Brief**:
-An AI-produced one-screen reading of a Candidate's materials (CV, certificates, video): facts, evidence, gaps, and flags. Input to a decision, never a decision.
+An AI-produced summary of one Application’s materials that cites evidence for material claims and identifies gaps for human screening.
 _Avoid_: AI score, summary, verdict
 
 **Suggested Score**:
-A number and rationale the AI proposes against the Rubric, visibly advisory; a human assigns the real Candidate Decision.
+An advisory assessment of an Application against an approved Rubric version, with evidence and rationale for each criterion and a weighted total when all criteria are resolved.
 _Avoid_: AI rating, auto-score, ranking decision
 
 **Candidate Decision**:
-The categorical screening state assigned to a Candidate by a human: `Accept` (advance), `Hold` (reserve), or `Reject` (dismissed). AI may suggest it; never assign it.
+The final screening outcome the Coordinator records for an Application: `Accept` (advance), `Hold` (reserve), or `Reject` (dismissed).
 _Avoid_: Status, swipe result, vote
 
 **Ballot**:
-One Assessor's structured record of Candidate Decisions, bookmarks, and private notes for a Campaign.
+One Assessor’s record of screening recommendations, bookmarks, and private notes for Applications in a Campaign.
 _Avoid_: Feedback form, review sheet, vote sheet
 
 **Deliberation**:
@@ -61,7 +61,7 @@ The alignment step where split decisions across Assessor Ballots are reviewed to
 _Avoid_: Calibration meeting, sync-up, grading session
 
 **Technical Test**:
-An optional Campaign stage with a Coordinator-chosen format: in-app exam, handwritten work photographed and uploaded, FGD invitation, or skipped entirely.
+An optional Campaign stage in which Candidates complete an In-app Exam or submit photos of handwritten work.
 _Avoid_: Exam (unless specifically the in-app format), assessment
 
 **In-app Exam**:
@@ -69,11 +69,11 @@ A Technical Test format taken inside the product: timed questions authored by th
 _Avoid_: Online test, quiz
 
 **FGD**:
-Focus Group Discussion: a grouped interview-discussion stage companies invite Candidates to instead of, or alongside, a Technical Test.
+Focus Group Discussion: a group Interview Session that can follow screening or a Technical Test.
 _Avoid_: Group interview (acceptable synonym), panel
 
 **Pipeline**:
-The ordered stages a Candidate moves through within a Campaign: Applied → Screened → Test → Interview → Offer → Hired (Test optional; stages skippable).
+The sequence of hiring stages an Application can move through within its Campaign: Applied → Screened → Test → Interview → Offer → Hired. Stages can be skipped and the Technical Test is optional.
 _Avoid_: Funnel, workflow, Kanban
 
 **Interview Session**:
