@@ -9,3 +9,5 @@ Use Node.js 22.12 or later. Run `npm ci` and `npm run dev`. Open the URL printed
 ## Browser tests
 
 Install Chromium with `npx playwright install chromium`, then run `npm test`. To run the same checks against an existing preview, set `SHOWCASE_URL` to its full URL. Each browser context starts with its own Campaign.
+
+[Cloudflare Pages build settings and deployment verification](deployment/README.md) · [Five-minute rehearsal guide in Bahasa Indonesia and English](docs/rehearsal.md)
