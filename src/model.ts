@@ -2,7 +2,13 @@ export type Language = 'id' | 'en'
 export type Assessor = 'ayu' | 'bima'
 export type Role = 'candidate' | Assessor | 'coordinator'
 export type Decision = 'accept' | 'hold' | 'reject'
-export type Stage = 'applied' | 'screened' | 'test' | 'interview' | 'offer' | 'hired'
+export type Stage =
+  | 'applied'
+  | 'screened'
+  | 'test'
+  | 'interview'
+  | 'offer'
+  | 'hired'
 export interface Draft {
   name: string
   email: string
@@ -45,5 +51,9 @@ export interface ViewProps {
   campaign: Campaign
   update: (change: (previous: Campaign) => Campaign) => void
 }
-export const staff = {ayu: 'Ayu Lestari', bima: 'Bima Nugraha', coordinator: 'Ratna Dewi'}
-export const caseIds = {clear:'app-01', gap:'app-02', test:'app-03'}
+export const staff = {
+  ayu: 'Ayu Lestari',
+  bima: 'Bima Nugraha',
+  coordinator: 'Ratna Dewi',
+}
+export const caseIds = { clear: 'app-01', gap: 'app-02', test: 'app-03' }
