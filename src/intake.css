@@ -1,0 +1,13 @@
+.intake form, .intake-section { display: grid; gap: 1rem; }
+.intake-section { margin: 0; padding: 0; border: 0; min-width: 0; }
+.intake-section + .intake-section { border-top: 1px solid #d7dfd9; padding-top: 1.35rem; }
+.intake label { display: block; font-weight: 620; margin-bottom: .35rem; }
+.intake :is(input, select, textarea) { box-sizing: border-box; display: block; max-width: 100%; width: 100%; font: inherit; }
+.intake textarea { min-height: 5rem; resize: vertical; }
+.intake video { display: block; width: 100%; max-width: 32rem; border-radius: .5rem; background: #1e322c; }
+.intake .field-hint { margin: -.1rem 0 .45rem; color: #526158; font-size: .9rem; }
+.intake .sample-action, .intake .submit-action { justify-self: start; }
+.intake .original-link { display: inline-block; margin-top: .55rem; }
+.intake .contact-fields { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); }
+.intake .mailbox { border-left: .25rem solid #386953; padding-left: 1rem; margin: 1.5rem 0; }
+.intake .mailbox p { overflow-wrap: anywhere; }
